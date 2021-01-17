@@ -1,0 +1,72 @@
+body{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+  
+  
+  h1, h2 {
+    margin-top: 10px;
+  }
+  
+  h1 {
+    line-height: 30px;
+    color: #5e6f7c;
+  }
+.aboutimg{
+  height:25vh;
+  background: hsla(312, 66%, 76%, 1);
+
+background: linear-gradient(90deg, hsla(312, 66%, 76%, 1) 0%, hsla(234, 93%, 67%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(312, 66%, 76%, 1) 0%, hsla(234, 93%, 67%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(312, 66%, 76%, 1) 0%, hsla(234, 93%, 67%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EA98DA", endColorstr="#5B6CF9", GradientType=1 );
+}
+.aboutp{
+  padding: 6vw;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  color:floralwhite;
+  line-height: 0.85;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px floralwhite;
+}
+.abouttextouter{
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  color: #2b2d42;
+}
+.abouttext{
+  padding: 2vw;
+  color: #2b2d42;
+}
+
+@media (max-width: 768px) {
+  .aboutimg{
+    height:30vh;
+  }
+  body {
+    padding: 30px;
+  }
+  .aboutp{
+    font-size: 50px;
+}
+}
+@media (max-width: 420px) {
+  body {
+    padding: 10px;
+    
+  }
+  .aboutimg{
+    height:35vh;
+  }
+  .aboutp{
+      padding: 8vh;
+      font-size: 30px;
+  }
+}

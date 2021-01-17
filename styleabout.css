@@ -1,0 +1,120 @@
+.body{
+    font-family: Helvetica, sans-serif;
+}
+@font-face {
+    font-family: font3;
+    src: url("./fonts/Autobus-Bold.ttf");
+  }
+  @font-face {
+    font-family: font4;
+    src: url("../fonts/Rounded_Elegance.ttf");
+  }
+.abt{
+    background-color: floralwhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2vw 5vw;
+    font-size: 3vh;
+    color: floralwhite;
+}
+.abtimg{
+     width:20vw;
+     height: 30vh;
+     border-radius: 10px;
+     overflow:hidden;
+     
+}
+.abtxt{
+    font-family: font4;
+    background-color: floralwhite;
+    width:80vw;
+    color: #072f4b;
+    border-radius: 15px;
+    padding: 2px 50px;
+}
+.abtxt h3{
+    font-family: font4;
+    text-decoration: underline;
+    color: #072f4b;
+}
+.abthead{
+    padding: 30px;
+}
+.abthead h1,h2{
+    font-family: font4;
+  color: floralwhite;
+}
+.abtdiv{
+    height: 35vh;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: gray;
+    color: floralwhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+    @media screen and (max-width: 766px) {
+    .abt{
+        background-color: floralwhite;
+        display: flex;
+        flex-direction: column;
+    }
+    }
+    
+    @media screen and (max-width: 1024px)
+    {
+        .abt{
+            background-color: floralwhite;
+            display: flex;
+            flex-direction: column;
+        }
+        .abthead h1,h2{
+            font-size: 3vh;
+        }
+        .abthead{
+            padding: 1vh 2vh;
+        }
+        .abtimg{
+          height: 23vh;
+          width: 23vh;
+        }
+        .abtdiv{
+            height: 25vh;
+            padding: 1vh;
+        }
+
+    }
+    @media screen and (max-width: 479px) {
+        .abt{
+            background-color: floralwhite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 2vh;
+        }
+        .abthead{
+            padding: 1vh 2vh;
+            text-align: center;
+        }
+        .abthead h1,h2{
+            font-size: 4vh;
+        }
+        .abtimg{
+            width:90vw;
+            height: 45vh;
+        }
+        .abtdiv{
+            height: 60vh;
+            border-radius: 10px;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .abtxt{
+            width:90vw;
+        }
+    }
