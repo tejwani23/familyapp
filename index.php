@@ -104,21 +104,21 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
 <h1 style="font-size:3vh;">Family Tree</h1>
   <img class="card-img-top" src="./images/aa1.jpg" alt="Card image cap">
   <div class="card-body">
-    <p class="card-text">Expertise in video analysis of players skills to help them get better.</p>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ante nisl, lacinia vel imperdiet in, placerat vel velit.</p>
   </div>
 </div>
 <div class="card" style="width: 16rem; z-index:10000;">
 <h1 style="font-size:3vh;">Family Events</h1>
   <img class="card-img-top" src="./images/aa3.jpg" alt="Card image cap">
   <div class="card-body">
-    <p class="card-text">Mental strength is as important as physical ability in Cricket and our team ensures that.</p>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ante nisl, lacinia vel imperdiet in, placerat vel velit.</p>
   </div>
 </div>
 <div class="card" style="width: 16rem; z-index:10000;">
 <h1 style="font-size:3vh;">Connected Map</h1>
   <img class="card-img-top" src="./images/aa5.jpg" alt="Card image cap">
   <div class="card-body">
-    <p class="card-text">Stay connected with the latest happenings at the Academy. We celebrate Cricket everyday.</p>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ante nisl, lacinia vel imperdiet in, placerat vel velit.</p>
   </div>
 </div>
         </div>
