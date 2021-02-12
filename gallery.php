@@ -9,7 +9,8 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery || ABCA</title>
+    <title>Gallery || FamilyApp</title>
+    <link rel = "icon" href ="./images/aa2.png">
     <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
@@ -24,7 +25,7 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
-          <h1><a href="index.php">Arun Bhardwaj Cricket Foundation</a></h1>
+          <h1><a href="index.php">Tejwani Family</a></h1>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
@@ -33,14 +34,12 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
 	  <ul class="right">
           <li><a href="about.php">About Us</a></li>
           <li class="active"><a href="gallery.php">Gallery</a></li>
-          <li><a href="team.php">Team</a></li>
-          <li><a href="programs.php">Programs</a></li>
           <li><a href="contact.php">Contact</a></li>
           <?php
     
           if(isset($_SESSION['username'])){
-            echo '<li><a href="learning.php">Learning Centre</a></li>';
-            echo '<li><a href="blog.php">Blogs</a></li>';
+            echo '<li><a href="tree.php">Family-Tree</a></li>';
+            echo '<li><a href="events.php">Family-Events</a></li>';
             echo '<li><a href="account.php">My Account</a></li>';
             echo '<li><a href="logout.php">Log Out</a></li>';
           }
@@ -55,20 +54,14 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
     
     <div class="container">
 	<div class="gallery">
-		<img src="./images/c10.jpg" alt="" width="100%" height="auto" class="gallery-img" id="g1"/>
-		<img src="./images/c1.jpg" alt="" width="100%" height="auto" class="gallery-img" />		
-		<img src="./images/c2.jpg" alt="" width="100%" height="auto" class="gallery-img" />
-		<img src="./images/c3.jpg" alt="" width="100%" height="auto" class="gallery-img" />
-    <img src="./images/c4.jpg" alt="" width="100%" height="auto" class="gallery-img" />
-    <img src="./images/c5.jpg" alt="" width="100%" height="auto" class="gallery-img" />
-		<img src="./images/c6.jpg" alt="" width="100%" height="auto" class="gallery-img" />		
-		<img src="./images/c7.jpg" alt="" width="100%" height="auto" class="gallery-img" />
-		<img src="./images/c8.jpg" alt="" width="100%" height="auto" class="gallery-img" />
-        <img src="./images/c9.jpg" alt="" width="100%" height="auto" class="gallery-img" />
-        <img src="./images/c10.jpg" alt="" width="100%" height="auto" class="gallery-img" />
-        <img src="./images/c10.jpg" alt="" width="100%" height="auto" class="gallery-img" />
-		
-	</div> 
+		<img src="./images/aa3.jpeg" alt="" width="100%" height="auto" class="gallery-img" id="g1"/>
+		<img src="./images/aa1.jpg" alt="" width="100%" height="auto" class="gallery-img" />		
+		<img src="./images/aa2.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+		<img src="./images/aa4.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+    <img src="./images/aa5.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+    <img src="./images/aa6.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+		<img src="./images/aa1.jpg" alt="" width="100%" height="auto" class="gallery-img" />	
+	</div>
 </div>
 
 <div id="myModal" class="modal fade" role="dialog">

@@ -29,6 +29,7 @@
     font-family: font4;
     background-color: floralwhite;
     width:80vw;
+    font-size: 5vw;
     color: #072f4b;
     border-radius: 15px;
     padding: 2px 50px;
@@ -39,14 +40,22 @@
     color: #072f4b;
 }
 .abthead{
+    text-align: center;
     padding: 30px;
 }
 .abthead h1,h2{
+    text-align: center;
+    font-size: 5vw;
     font-family: font4;
   color: floralwhite;
 }
+.abthead p{
+    font-family: font4;
+    font-size: 1.2vw;
+    text-align: center;
+}
 .abtdiv{
-    height: 35vh;
+    height: 50vw;
     border-radius: 10px;
     padding: 20px;
     background-color: gray;
@@ -73,7 +82,7 @@
             flex-direction: column;
         }
         .abthead h1,h2{
-            font-size: 3vh;
+            font-size: 6vw;
         }
         .abthead{
             padding: 1vh 2vh;
@@ -83,8 +92,11 @@
           width: 23vh;
         }
         .abtdiv{
-            height: 25vh;
+            height: 120vw;
             padding: 1vh;
+        }
+        .abthead p{
+            font-size: 2vw;
         }
 
     }
@@ -101,20 +113,30 @@
             text-align: center;
         }
         .abthead h1,h2{
-            font-size: 4vh;
+            font-size: 10vw;
         }
         .abtimg{
             width:90vw;
             height: 45vh;
         }
         .abtdiv{
-            height: 60vh;
+            height: 380vw;
             border-radius: 10px;
             padding: 10px;
             flex-direction: column;
             justify-content: flex-start;
         }
+        .abthead p{
+            font-size: 4vw;
+        }
         .abtxt{
+            font-size: 7vw;
             width:90vw;
+        }
+    }
+
+    @media screen and (max-width: 479px) {
+        .abtdiv{
+            height: 420vw;
         }
     }

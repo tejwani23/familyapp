@@ -12,7 +12,8 @@ if (isset($_SESSION["username"])) {header ("location:index.php");}
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register || ABCF</title>
+    <title>Register | FamilyApp</title>
+    <link rel = "icon" href ="./images/aa2.jpg">
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
   </head>
@@ -21,23 +22,21 @@ if (isset($_SESSION["username"])) {header ("location:index.php");}
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
-          <h1><a href="index.php">Arun Bhardwaj Cricket Foundation</a></h1>
+          <h1><a href="index.php">Tejwani Family</a></h1>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
 
       <section class="top-bar-section">
         <ul class="right">
-          <li><a href="about.php">About Us</a></li>
+        <li><a href="about.php">About Us</a></li>
           <li><a href="gallery.php">Gallery</a></li>
-          <li><a href="team.php">Team</a></li>
-          <li><a href="cart.php">Programs</a></li>
           <li><a href="contact.php">Contact</a></li>
           <?php
-
+    
           if(isset($_SESSION['username'])){
-            echo '<li><a href="learning.php">Learning Centre</a></li>';
-            echo '<li><a href="blog.php">Blogs</a></li>';
+            echo '<li><a href="tree.php">Family-Tree</a></li>';
+            echo '<li><a href="events.php">Family-Events</a></li>';
             echo '<li><a href="account.php">My Account</a></li>';
             echo '<li><a href="logout.php">Log Out</a></li>';
           }
@@ -92,6 +91,78 @@ if (isset($_SESSION["username"])) {header ("location:index.php");}
           </div>
           <div class="row">
             <div class="small-4 columns">
+              <label for="right-label" class="right inline">Mother's Name</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Enter your Mother's Name" name="mother">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">Father's Name</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Enter your Father's Name" name="father">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">DOB</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="date" id="right-label" placeholder="<email_id>@domain_name.com" name="dob">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">Address</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Enter your Address" name="address">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">PIN Code</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Enter your pincode" name="pin">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">Facebook Link(If available)</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Type Here" name="fb">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">Instagram Link(If available)</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Type Here" name="insta">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">LInkedin Link(If available)</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Type Here" name="linkedin">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">Twitter Link(If available)</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Type Here" name="twitter">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
               <label for="right-label" class="right inline">Password</label>
             </div>
             <div class="small-8 columns">
@@ -116,7 +187,7 @@ if (isset($_SESSION["username"])) {header ("location:index.php");}
       <div class="small-12">
 
         <footer>
-           <p style="text-align:center; font-size:0.8em;">&copy; Arun Bhardwaj Cricket Foundation . All Rights Reserved.</p>
+           <p style="text-align:center; font-size:0.8em;">&copy; FamilyApp. All Rights Reserved.</p>
         </footer>
 
       </div>

@@ -6,6 +6,7 @@ include 'config.php';
 
 $username = $_POST["username"];
 $password = $_POST["pwd"];
+//$password=md5($password);
 $flag = 'true';
 
 $result = $mysqli->query('SELECT id,email,password,fname,type from users order by id asc');

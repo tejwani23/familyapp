@@ -14,7 +14,8 @@ if(isset($_SESSION["username"])){
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login || AnyList</title>
+    <title>Login | FamilyApp</title>
+    <link rel = "icon" href ="./images/aa2.jpg">
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
   </head>
@@ -23,7 +24,7 @@ if(isset($_SESSION["username"])){
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
-          <h1><a href="index.php">Arun Bhardwaj Cricket Foundation</a></h1>
+          <h1><a href="index.php">Tejwani Family</a></h1>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
@@ -32,14 +33,12 @@ if(isset($_SESSION["username"])){
         <ul class="right">
         <li><a href="about.php">About Us</a></li>
           <li><a href="gallery.php">Gallery</a></li>
-          <li><a href="team.php">Team</a></li>
-          <li><a href="programs.php">Programs</a></li>
           <li><a href="contact.php">Contact</a></li>
           <?php
-
+    
           if(isset($_SESSION['username'])){
-            echo '<li><a href="learning.php">Learning Centre</a></li>';
-            echo '<li><a href="blog.php">Blogs</a></li>';
+            echo '<li><a href="tree.php">Family-Tree</a></li>';
+            echo '<li><a href="events.php">Family-Events</a></li>';
             echo '<li><a href="account.php">My Account</a></li>';
             echo '<li><a href="logout.php">Log Out</a></li>';
           }
@@ -95,7 +94,7 @@ if(isset($_SESSION["username"])){
       <div class="small-12">
 
         <footer>
-           <p style="text-align:center; font-size:0.8em;">&copy; Arun Bhardwaj Cricket Foundation. All Rights Reserved.</p>
+           <p style="text-align:center; font-size:0.8em;">&copy; FamilyApp. All Rights Reserved.</p>
         </footer>
 
       </div>

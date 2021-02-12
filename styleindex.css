@@ -1,4 +1,5 @@
 /* CSS reset */
+
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
 	margin:0;
 	padding:0;
@@ -307,20 +308,35 @@ a{
 	    opacity: 0;
 	    animation-timing-function: ease-in;
 	}
+	5%{
+		opacity: 0.2;
+	}
 	8% {
-	    opacity: 0.2;
+	    opacity: 0.6;
 	    transform: scale(1.01);
 	    animation-timing-function: ease-out;
 	}
 	17% {
-	    opacity: 0.2;
-	    transform: scale(1.02);
+	    opacity: 0.9;
+		transform: scale(1.02);
+		animation-timing-function: ease-out;
 	}
 	25% {
-	    opacity: 0;
-	    transform: scale(1.1);
+	    opacity: 0.7;
+		transform: scale(1.1);
+		animation-timing-function: ease-out;
 	}
-	100% { opacity: 0 }
+	50%{
+		opacity: 0.5;
+		animation-timing-function: ease-out;
+	}
+	75%{
+		opacity: 0.2;
+		animation-timing-function: ease-out;
+	}
+	100% { opacity: 0 
+		animation-timing-function: ease-out;
+	}
 }
 /* Animation for the title */
 @-webkit-keyframes titleAnimation { 
@@ -449,13 +465,14 @@ body{
 }
 
 .logomain{
-	background-image:url(./images/ABCCF.png); 
+	background-color: white;
+	background-image:url(./images/aa2.jpg); 
 	border-radius:13px; 
-	width:15vw; 
+	width:26vw; 
 	margin: 10vh auto; 
 	text-align:center; 
 	padding: 1vh 1vh; 
-	height:30vh; 
+	height:26vw; 
 	background-size: cover;
 }
 
@@ -476,7 +493,9 @@ body{
 	padding: 20px 0;
   }
   #about .container{
-	  background-color: #354f52;
+	  /* background-color: #354f52; */
+	  background-color: white;
+	  background-image: url(./images/bg6.jpg);
 	  /* background-image: url(./images/bg3.jpg); */
 	  padding: 4vh;
   }
@@ -540,7 +559,7 @@ body{
 
 .abcol{
 	width: 40vw;
-	height: 50vh;
+	/* height: 50vh; */
 }
 .abcol1{
 	width: 40vw;
@@ -550,7 +569,7 @@ body{
 .cdabouth1{
 	text-align: center; 
 	font-family: font2; 
-	color: white; 
+	color: #354f52; 
 	font-size: large; 
 	font-size: 28px;
 	margin-bottom: 0;
@@ -558,8 +577,8 @@ body{
 .cdaboutp{
 	text-align: center; 
 	font-family: font4; 
-	color: white; 
-	font-size: 24px;
+	color: #354f52; 
+	font-size: 1.8vw;
 }
 .cdabout1{
 	padding: 2vh 2vh; 
@@ -614,8 +633,10 @@ body{
 	margin-left: 20px;
 }
 .card-img-top{
+	height: 30vh;
+	width: 20vw;
 	padding: 5px 10px;
-	border-radius: 10px;
+	border-radius: 20px;
 }
 .landabt{
    display: flex;
@@ -734,5 +755,8 @@ body{
 		}
 		#register div{
 			font-size: medium;
+		}
+		.card-img-top{
+			width: 80vw;
 		}
     }

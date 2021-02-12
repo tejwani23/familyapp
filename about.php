@@ -9,7 +9,8 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us || AnyList</title>
+    <title>About | FamilyApp</title>
+    <link rel = "icon" href ="./images/aa2.jpg">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="./styleabout.css">
@@ -21,7 +22,7 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
-          <h1><a href="index.php">Arun Bhardwaj Cricket Foundation</a></h1>
+          <h1><a href="index.php">Tejwani Family</a></h1>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
@@ -30,14 +31,12 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
 	  <ul class="right">
           <li class="active"><a href="about.php">About Us</a></li>
           <li><a href="gallery.php">Gallery</a></li>
-          <li><a href="team.php">Team</a></li>
-          <li><a href="programs.php">Programs</a></li>
           <li><a href="contact.php">Contact</a></li>
           <?php
     
           if(isset($_SESSION['username'])){
-            echo '<li><a href="learning.php">Learning Centre</a></li>';
-            echo '<li><a href="blog.php">Blogs</a></li>';
+            echo '<li><a href="tree.php">Family-Tree</a></li>';
+            echo '<li><a href="events.php">Family-Events</a></li>';
             echo '<li><a href="account.php">My Account</a></li>';
             echo '<li><a href="logout.php">Log Out</a></li>';
           }
@@ -52,24 +51,14 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
     <div class="abt">
       <div class="abtdiv">
         <div class="abthead">
-           <h1>About Us</h1>
-           <h1>Mr. Arun K. Bhardwaj</h1>
+           <h1 style="font-weight:600;">About</h1>
+           <p style="font-weight:600;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ante nisl, lacinia vel imperdiet in, placerat vel velit. 
+                Integer blandit, dui nec vulputate scelerisque, lorem arcu imperdiet tellus, at tempus nulla tortor eget dolor. 
+                Integer finibus diam quis feugiat pellentesque. Pellentesque et nulla arcu. 
+                Quisque nulla nulla, scelerisque id eros eget, scelerisque ultrices lacus.
+                Aenean dapibus condimentum risus a bibendum. Phasellus tristique nunc eu pulvinar fringilla.</p> 
         </div>
-        <div class="abtimg">
-          <img src="./images/c5.jpg">
         </div>
-        </div>
-
-     
-
-    <!-- <div class="row" style="margin-top:30px;">
-      <div class="small-12">
-        <footer>
-           <p style="text-align:center; font-size:0.8em;">&copy; AnyList. All Rights Reserved.</p>
-        </footer>
-
-      </div>
-    </div> -->
     <div>
     </div>
 

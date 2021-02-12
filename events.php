@@ -2,6 +2,9 @@
 
 if(session_id() == '' || !isset($_SESSION)){session_start();}
 
+if (isset($_SESSION["username"])) {header ("location:index.php");}
+
+
 ?>
 
 <!doctype html>
@@ -9,7 +12,7 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | FamilyApp</title>
+    <title>Register | FamilyApp</title>
     <link rel = "icon" href ="./images/aa2.jpg">
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
@@ -28,68 +31,80 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
         <ul class="right">
         <li><a href="about.php">About Us</a></li>
           <li><a href="gallery.php">Gallery</a></li>
-          <li class="active"><a href="contact.php">Contact</a></li>
+          <li><a href="contact.php">Contact</a></li>
           <?php
     
           if(isset($_SESSION['username'])){
-            echo '<li><a href="tree.php">Family-Tree</a></li>';
+            echo '<li><a href="learning.php">Family-Tree</a></li>';
             echo '<li><a href="events.php">Family-Events</a></li>';
             echo '<li><a href="account.php">My Account</a></li>';
             echo '<li><a href="logout.php">Log Out</a></li>';
           }
           else{
             echo '<li><a href="login.php">Log In</a></li>';
-            echo '<li><a href="register.php">Register</a></li>';
+            echo '<li class="active"><a href="register.php">Register</a></li>';
           }
           ?>
         </ul>
       </section>
     </nav>
 
-    <form method="POST" action="#" style="margin-top:30px;">
+
+
+
+
+    <form method="POST" action="insert2.php" style="margin-top:30px;">
       <div class="row">
         <div class="small-8">
-        <div class="row">
-            <div class="small-4 columns">
-              <label for="right-label" class="right inline">Name</label>
-            </div>
-            <div class="small-8 columns">
-              <input type="text" id="right-label" placeholder="Name" name="username">
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-4 columns">
-              <label for="right-label" class="right inline">Email</label>
-            </div>
-            <div class="small-8 columns">
-              <input type="email" id="right-label" placeholder="<email_id>@domain_name.com" name="username">
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-4 columns">
-              <label for="right-label" class="right inline">What would you like to ask us?</label>
-            </div>
-            <div class="small-8 columns">
-              <textarea id="right-label" placeholder="Type here" name="pwd"></textarea>
-            </div>
-          </div>
 
           <div class="row">
             <div class="small-4 columns">
+              <label for="right-label" class="right inline">Event type</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Type Here" name="ename">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">Start Date</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="date" id="right-label" placeholder="Enter your Last Name" name="sdate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">End Date</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="text" id="right-label" placeholder="Enter your Age" name="edate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-4 columns">
+              <label for="right-label" class="right inline">E-Mail</label>
+            </div>
+            <div class="small-8 columns">
+              <input type="email" id="right-label" placeholder="<email_id>@domain_name.com" name="email">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="small-4 columns">
 
             </div>
             <div class="small-8 columns">
-              <input type="submit" id="right-label" value="Submit" style="background: #072f4b; border: none; border-radius:8px; color: #fff; font-family: 'Helvetica Neue', sans-serif; font-size: 1em; padding: 10px;">
-            </div>
+              <input type="submit" id="right-label" value="Submit" style="background: #072f4b; border-radius:8px; border: none; color: #fff; font-family: 'Helvetica Neue', sans-serif; font-size: 1em; padding: 10px;">
+             </div>
           </div>
         </div>
       </div>
     </form>
 
-    <div class="row" style="margin-top:30px;">
-      <div class="small-12">
 
-        <p style="text-align: center;">Wanna get in touch? Email us at <a href="mailto:sansgroup@gmail.com">familyapp@famapp.com</a></p>
+    <div class="row" style="margin-top:10px;">
+      <div class="small-12">
 
         <footer>
            <p style="text-align:center; font-size:0.8em;">&copy; FamilyApp. All Rights Reserved.</p>
@@ -97,6 +112,7 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
 
       </div>
     </div>
+
 
 
 

@@ -9,7 +9,8 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us || ABCA</title>
+    <title>Family Tree || FamilyApp</title>
+    <link rel = "icon" href ="./images/aa2.jpg">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="./stylelearning.css">
@@ -21,7 +22,7 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
-          <h1><a href="index.php">Arun Bhardwaj Cricket Foundation</a></h1>
+          <h1><a href="index.php">Tejwani Family</a></h1>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
@@ -30,14 +31,12 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
 	  <ul class="right">
           <li><a href="about.php">About Us</a></li>
           <li><a href="gallery.php">Gallery</a></li>
-          <li><a href="team.php">Team</a></li>
-          <li><a href="cart.php">Programs</a></li>
           <li><a href="contact.php">Contact</a></li>
           <?php
     
           if(isset($_SESSION['username'])){
-            echo '<li><a href="learning.php">Learning Centre</a></li>';
-            echo '<li class="active"><a href="blog.php">Blogs</a></li>';
+            echo '<li class="active"><a href="tree.php">Family Tree</a></li>';
+            echo '<li><a href="events.php">Family Events</a></li>';
             echo '<li><a href="account.php">My Account</a></li>';
             echo '<li><a href="logout.php">Log Out</a></li>';
           }
@@ -50,21 +49,47 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
       </section>
     </nav>
     <div class="aboutimg">
-      <p class="aboutp">Never stop learning because life never stops teaching.</p>
+      <p class="aboutp">The family is one of the nature's masterpieces.</p>
     </div>
-     <h3> Coming Soon...</h3>
 
 
-    <!-- <div class="row" style="margin-top:30px;">
+    <div class="row" style="margin-top:10px;">
       <div class="small-12">
-        <footer>
-           <p style="text-align:center; font-size:0.8em;">&copy; AnyList. All Rights Reserved.</p>
-        </footer>
+        <?php
+          $i=0;
+          //$result = $mysqli->query("SELECT * FROM users");
+          $result = $mysqli->query('SELECT * from users order by id age');
 
-      </div>
-    </div> -->
-    <div>
-    </div>
+         if($result === FALSE){
+             die(mysqli_error($mysqli));
+         }
+
+        if($result){
+          while($obj = $result->fetch_object()){
+
+              echo '<div class="large-4 columns">';
+              echo '<p><h3>'.$obj->fname.'</h3></p>';
+              echo '<p><h3>'.$obj->lname.'</h3></p>';
+              echo '<p><h3>'.$obj->dob.'</h3></p>';
+              echo '<p><h3>'.$obj->address.'</h3></p>';
+              echo '<p><h3>'.$obj->pin.'</h3></p>';
+              echo '<p><h3>'.$obj->mother.'</h3></p>';
+              echo '<p><h3>'.$obj->father.'</h3></p>';
+              echo '<p><h3>'.$obj->email.'</h3></p>';
+              echo '<p><h3>'.$obj->fb.'</h3></p>';
+              echo '<p><h3>'.$obj->insta.'</h3></p>';
+              echo '<p><h3>'.$obj->linkedin.'</h3></p>';
+              echo '<p><h3>'.$obj->twitter.'</h3></p>';
+              echo '</div>';
+
+              $i++;
+            }
+
+          }
+
+          echo '</div>';
+          echo '</div>';
+          ?>
 
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
